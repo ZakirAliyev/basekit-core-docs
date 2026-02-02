@@ -15,80 +15,43 @@ export default defineConfig({
     // TOP NAVIGATION
     // ─────────────────────────────────────────────
     nav: [
-      { text: 'Docs', link: '/' },
-      {
-        text: 'GitHub',
-        link: 'https://github.com/YOUR_GITHUB_USERNAME/basekit-core'
-      }
+      { text: 'Guide', link: '/guide/introduction' },
+      { text: 'API Reference', link: '/api/string' },
+      { text: 'Changelog', link: 'https://github.com/YOUR_GITHUB_USERNAME/basekit-core/blob/main/CHANGELOG.md' }
     ],
 
-    // ─────────────────────────────────────────────
-    // SIDEBAR (REAL LIBRARY STRUCTURE)
-    // ─────────────────────────────────────────────
     sidebar: [
       {
-        text: 'Getting Started',
+        text: 'Guide',
         items: [
-          { text: 'Introduction', link: '/' },
-          { text: 'Core Concepts', link: '/core-concepts' }
+          { text: 'Introduction', link: '/guide/introduction' },
+          { text: 'Getting Started', link: '/guide/getting-started' }
         ]
       },
       {
         text: 'API Reference',
         items: [
-          { text: 'String Casing', link: '/api-string-casing' },
-          { text: 'String Formatting', link: '/api-string-formatting' },
-          { text: 'String Comparison', link: '/api-string-comparison' }
-        ]
-      },
-      {
-        text: 'Advanced',
-        items: [
-          { text: 'Advanced Topics', link: '/advanced' }
+          { text: 'String Utilities', link: '/api/string' },
+          { text: 'Function Utilities', link: '/api/function' },
+          { text: 'Object Utilities', link: '/api/object' },
+          { text: 'Array Utilities', link: '/api/array' },
+          { text: 'Number Utilities', link: '/api/number' },
+          { text: 'Time Utilities', link: '/api/time' }
         ]
       }
     ],
 
-    // ─────────────────────────────────────────────
-    // GITHUB / SOCIAL
-    // ─────────────────────────────────────────────
     socialLinks: [
-      {
-        icon: 'github',
-        link: 'https://github.com/YOUR_GITHUB_USERNAME/basekit-core'
-      }
+      { icon: 'github', link: 'https://github.com/YOUR_GITHUB_USERNAME/basekit-core' }
     ],
 
-    // ─────────────────────────────────────────────
-    // FOOTER
-    // ─────────────────────────────────────────────
     footer: {
       message: 'Released under the MIT License.',
-      copyright:
-          'Copyright © ' +
-          new Date().getFullYear() +
-          ' Basekit Contributors'
+      copyright: 'Copyright © 2024-present Zakir Aliyev'
     },
 
-    // ─────────────────────────────────────────────
-    // SEARCH (LOCAL, FAST, NO ALGOLIA YET)
-    // ─────────────────────────────────────────────
     search: {
       provider: 'local'
-    },
-
-    // ─────────────────────────────────────────────
-    // DOCS UX
-    // ─────────────────────────────────────────────
-    outline: {
-      level: [2, 3],
-      label: 'On this page'
-    },
-
-    editLink: {
-      pattern:
-          'https://github.com/YOUR_GITHUB_USERNAME/basekit-core-docs/edit/main/docs/:path',
-      text: 'Edit this page on GitHub'
     }
   }
 })

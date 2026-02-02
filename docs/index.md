@@ -1,49 +1,23 @@
-# @basekit/core
-
-**Correct string handling in JavaScript is harder than it looks.**
-
-Most libraries fail when dealing with:
-- Unicode grapheme clusters (👨‍👩‍👧‍👦, emojis, combined characters)
-- Locale-specific casing rules (Turkish, Azerbaijani, German)
-- Diacritics and transliteration
-- Predictable behavior in performance‑critical paths
-
-**@basekit/core** exists to solve these problems — correctly, deterministically,
-and without external dependencies.
-
 ---
+layout: home
 
-## Why this library exists
+hero:
+  name: "Basekit Core"
+  text: "The Ultimate Utility Library"
+  tagline: "Correct, Unicode-safe, locale-aware string & data utilities for modern JavaScript."
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /guide/getting-started
+    - theme: alt
+      text: View API
+      link: /api/string
 
-JavaScript strings are UTF‑16 encoded.  
-A visible character is not always a single code unit.
-
-This causes subtle bugs in:
-- `substring`, `slice`, `reverse`
-- Casing (`toUpperCase`, `toLowerCase`)
-- Slug generation
-- User‑visible truncation
-
-Basekit addresses these issues using native `Intl` APIs with safe fallbacks.
-
+features:
+  - title: Zero Dependencies
+    details: Lightweight and pure. No bloat, just the essential utilities you need.
+  - title: Unicode Safe
+    details: Handles emojis, extended character sets, and locale-specific casing correctly.
+  - title: TypeScript Native
+    details: Built with TypeScript for TypeScript. First-class type definitions included.
 ---
-
-## Design principles
-
-- Zero external dependencies
-- Unicode‑ and grapheme‑safe by default
-- Locale‑aware behavior
-- Defensive handling of `null` and `undefined`
-- Explicit runtime trade‑offs
-
----
-
-## Non‑Goals
-
-Basekit is intentionally **not**:
-- a full i18n framework
-- a polyfill library
-- a framework‑specific helper set
-- a kitchen‑sink utility package
-
-Each exported function exists because it solves a **real runtime problem**.
